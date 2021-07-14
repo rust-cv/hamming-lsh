@@ -2,6 +2,14 @@
 name = "hamming-lsh"
 version = "0.1.0"
 edition = "2018"
+authors = ["Geordon Worley <vadixidav@gmail.com>"]
+license = "MIT"
+description = "Produces locality-sensitive hashes (LHS) for hamming-space bags of features"
+repository = "https://github.com/rust-cv/hamming-dict"
+documentation = "https://docs.rs/hamming-dict/"
+keywords = ["bow", "lsh", "hamming", "simhash", "bag"]
+categories = ["no-std", "computer-vision"]
+readme = "README.md"
 
 [dependencies]
 bitarray = { version = "0.5.1", default-features = false }

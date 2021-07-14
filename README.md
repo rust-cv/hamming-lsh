@@ -19,7 +19,7 @@
 [bll]: https://github.com/rust-cv/hamming-lsh/workflows/lints/badge.svg
 [bnl]: https://github.com/rust-cv/hamming-lsh/workflows/no-std/badge.svg
 
-Generates and utilizes deterministic dictionaries to generate locality-sensitive hashes (LHS) for arbitrary hamming space features
+Produces locality-sensitive hashes (LHS) for hamming-space bags of features
 
 This allows you to generate relatively balanced locality-sensitive hashes (LSH) hashes for bags of features. This also allows you to reduce the dimensionality of a single hamming feature into a smaller hamming space, but it is slightly imbalanced when doing so, especially for small input hamming spaces (number of input bits).
 
