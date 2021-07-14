@@ -11,10 +11,13 @@ keywords = ["bow", "lsh", "hamming", "simhash", "bag"]
 categories = ["no-std", "computer-vision"]
 readme = "README.md"
 
+[features]
+serde1 = ["serde", "bitarray/serde"]
+
 [dependencies]
 bitarray = { version = "0.5.1", default-features = false }
 hamming-dict = { version = "0.4.0", default-features = false, features = ["alloc"] }
-serde = { version = "1.0.126", features = ["derive"], default-features = false }
+serde = { version = "1.0.126", features = ["derive", "alloc"], default-features = false, optional = true }
 
 [dev-dependencies]
 rand = { version = "0.8.4", default-features = false }
