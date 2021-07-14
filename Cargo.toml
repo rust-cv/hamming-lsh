@@ -14,6 +14,7 @@ readme = "README.md"
 [dependencies]
 bitarray = { version = "0.5.1", default-features = false }
 hamming-dict = { version = "0.4.0", default-features = false, features = ["alloc"] }
+serde = { version = "1.0.126", features = ["derive"], default-features = false }
 
 [dev-dependencies]
 rand = { version = "0.8.4", default-features = false }

@@ -4,19 +4,15 @@ extern crate alloc;
 
 use alloc::{vec, vec::Vec};
 use bitarray::BitArray;
-
-#[derive(Clone, Debug)]
-struct Codeword<const B: usize> {
-    codeword: BitArray<B>,
-    threshold: u32,
-    correction_factor: f64,
-}
+#[cfg(feature = "serde")]
+use serde::{Deserialize, Serialize};
 
 /// This structure allows one to generate balanced locality-sensitive hashes.
 ///
 /// `B` is the number of bytes in the codewords.
 /// `H` is the number of bytes in the hash.
 #[derive(Clone, Debug)]
+#[cfg_attr(feature = "serde", derive(Deserialize, Serialize))]
 pub struct HammingHasher<const B: usize, const H: usize> {
     codewords: Vec<BitArray<B>>,
     imbalance: f64,
