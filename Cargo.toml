@@ -5,4 +5,8 @@ edition = "2018"
 
 [dependencies]
 bitarray = { version = "0.5.1", default-features = false }
-hamming-dict = { version = "0.1.0", default-features = false, features = ["alloc"] }
+hamming-dict = { version = "0.2.0", default-features = false, features = ["alloc"] }
+rand = { version = "0.8.4", default-features = false }
+rand_xoshiro = { version = "0.6.0", default-features = false }
+
+[dev-dependencies]
