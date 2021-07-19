@@ -15,8 +15,8 @@ readme = "README.md"
 serde1 = ["serde", "bitarray/serde"]
 
 [dependencies]
-bitarray = { version = "0.5.1", default-features = false }
-hamming-dict = { version = "0.4.0", default-features = false, features = ["alloc"] }
+bitarray = { version = "0.9.1", default-features = false }
+hamming-dict = { version = "0.5.0", default-features = false, features = ["alloc"] }
 serde = { version = "1.0.126", features = ["derive", "alloc"], default-features = false, optional = true }
 
 [dev-dependencies]
