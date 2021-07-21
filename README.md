@@ -23,6 +23,10 @@ Produces locality-sensitive hashes (LHS) for hamming-space bags of features
 
 This allows you to generate relatively balanced locality-sensitive hashes (LSH) hashes for bags of features. This also allows you to reduce the dimensionality of a single hamming feature into a smaller hamming space, but it is slightly imbalanced when doing so, especially for small input hamming spaces (number of input bits).
 
+## Consider an Alternative
+
+I have found that this was not very effective in practice, and that more traditional binary term frequency vectors worked better. This crate is still here for you to use, but there is another crate over at https://crates.io/crates/hamming-bow which will likely give you better results and does almost the same thing. This might still be useful for you to perform dimensionality reduction in hamming space.
+
 ## How it works
 
 This works by using `hamming-dict` to create codewords in the hamming space that are as maximally spaced out as possible.
