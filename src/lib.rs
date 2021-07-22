@@ -34,6 +34,17 @@ impl<const B: usize, const H: usize> HammingHasher<B, H> {
         }
     }
 
+    /// There must be exactly `H * 8` codewords.
+    pub fn new_with_codewords(codewords: Vec<BitArray<B>>) -> Self {
+        assert_eq!(codewords.len(), H * 8);
+        let imbalance = hamming_volume_imbalance(B * 8);
+
+        Self {
+            codewords,
+            imbalance,
+        }
+    }
+
     const fn threshold() -> u32 {
         // The correct hamming radius to encapsulate roughly half the space is always
         // half of the bits of the hamming space. However, this always overshoots half
